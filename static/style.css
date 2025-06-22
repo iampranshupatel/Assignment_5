@@ -351,6 +351,7 @@ textarea:focus {
   }
 }
 }
+@media (max-width: 600px) {
   /* Buttons */
   .btn {
     font-size: 0.85rem;
@@ -401,6 +402,7 @@ textarea:focus {
     justify-content: flex-end;
     gap: 0.5rem;
   }
+}
 
 
 /* -------------------- Further tweaks below 480px -------------------- */
