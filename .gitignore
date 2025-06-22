@@ -1,0 +1,15 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# virtualenv
+venv/
+
+# SQLite DB
+events.db
+
+# VSCode settings
+.vscode/
+
+# Mac/Linux metadata
+.DS_Store

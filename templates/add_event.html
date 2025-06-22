@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+      <div class="flash flash-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endwith %}
+
+  <section class="content-container">
+    <h2 class="section-title">Add New Event</h2>
+    <form method="POST" action="{{ url_for('add_event') }}" class="event-form fade-in-up">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input id="title" name="title" type="text" required />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+      <div class="form-row">
+        <div class="form-group half-width">
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" required />
+        </div>
+        <div class="form-group half-width">
+          <label for="time">Time</label>
+          <input id="time" name="time" type="time" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input id="location" name="location" type="text" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Add Event</button>
+    </form>
+  </section>
+{% endblock %}
