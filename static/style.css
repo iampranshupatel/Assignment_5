@@ -418,5 +418,15 @@ textarea:focus {
     margin-top: -15px;
   }
 }
-
+@media (max-width: 600px) {
+  .banner-text {
+    background: none !important;      /* remove white background */
+    white-space: nowrap;              /* keep it on one line */
+    overflow: hidden;                 /* hide any overflow if it still nudges */
+    text-overflow: ellipsis;          /* optional: show “…” if it overflows */
+    padding: 0 !important;            /* remove padding so it sits flush */
+    font-size: clamp(0.6rem, 4vw, 1rem); /* ensure it’s still fluid */
+    /* flex centering already handles horizontal/vertical centering */
+  }
+}
 
